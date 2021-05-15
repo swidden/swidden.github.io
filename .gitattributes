@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+/Users/maggi/Documents/GitHub/swidden.github.io/THESIS.mkv filter=lfs diff=lfs merge=lfs -text
+THESIS.mkv filter=lfs diff=lfs merge=lfs -text
