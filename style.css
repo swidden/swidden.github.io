@@ -44,7 +44,7 @@ a {
 
 /* unvisited link */
 a:link {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 /* visited link */
