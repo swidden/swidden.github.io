@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>🌱</title>
+<style>
+{
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 35.33%;
+  padding: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}   
+  </style>
+</head>
+
+<body>
+
+
+<img src="poo%20tee%20weet.gif" alt="poo tee weet" >
+<div class="clearfix">
+  <div class="img-container">    
+    <img src="poo4.jpg" height="300"style="width:100%">
+    </div>
+  <div class="img-container">  
+    <img class="middle-img" src="poo%20tee%20weet.png"/ height="300" style="width:100%">
+    </div>
+<img src="poo%20tee%20weet.gif" alt="poo tee weet" width="640" >
+      <font color=#FFFFFF>   <figcaption>poo-tee-weet </figcaption></font> 
+<br>
+
+</html>
