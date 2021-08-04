@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+p
+{
+	font-family: "PT Sans"; 
+	font-size: 20px;
+	padding-top: 20px;
+	color: #4B0739; 
+}
+
+.text
+{ font-family: "PT Sans";
+	font-size: 14pt;
+	color: #271610;
+}
+
+img {
+	margin-left: 10px;
+}
+
+
+a {
+	margin-left: 50px;
+	color: #432F43;
+}
+
+.one
+{ 
+	padding-left: 140px;
+}
+
+.two
+{
+	padding-left: 266px;
+}
+
+.three
+{
+	padding-left: 434px;
+}
+
+.four
+{
+	padding-left: 270px;
+}
+
+/* unvisited link */
+a:link {
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    text-decoration: underline;
+}
