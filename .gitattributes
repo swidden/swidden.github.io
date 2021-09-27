@@ -3,3 +3,4 @@
 /Users/maggi/Documents/GitHub/swidden.github.io/THESIS.mkv filter=lfs diff=lfs merge=lfs -text
 THESIS.mkv filter=lfs diff=lfs merge=lfs -text
 THE.mkv filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
