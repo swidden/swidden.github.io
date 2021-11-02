@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+<html>
+ <title>🔥</title>
+ <head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
+    <style>
+
+     
+      body {
+        font-family: 'Inconsolata', monospace;
+        font-size: 11px;
+      }
+      a:link, a:visited {
+        text-decoration: none;
+        line-height: 1;
+        white-space:pre;
+      }
+
+      button {
+        font-family: 'Inconsolata', monospace;
+        font-size: 11px;
+        background: none;
+        border: 0;
+        padding: 0;
+        line-height: 1;
+        text-decoration: none;
+        white-space:pre;
+        cursor: pointer;
+      }
+      .blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+    </style>
+    <style id="textcolor">
+       button, a:link, a:visited {color: black;}
+    </style>
+
+
+    <script>
+      x=160;
+      y=50;
+      smitex=0;
+      smitey=0;
+      smite=false;
+
+
+      baseimage =[...Array(y)].map(e => Array(x).fill(0));
+      outimage =[...Array(y)].map(e => Array(x).fill("&nbsp;"));
+      treeimage=[
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#0c6313'>.</span>","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#095c10'>V</span>","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#084a0d'>´</span>","<span style='color:#084a0d'>V</span>","<span style='color:#084a0d'>`</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#084a0d'>´</span>","<span style='color:#084a0d'>\\</span>","<span style='color:#084a0d'>|</span>","<span style='color:#084a0d'>/</span>","<span style='color:#084a0d'>`</span>","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#084a0d'>|</span>","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#06400b'>^</span>","x","x","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>´</span>","&nbsp;","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>.</span>","x","x","x","x","x"],
+    ["x","x","x","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>´</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>.</span>","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>-</span>","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>-</span>","<span style='color:#06400b'>´</span>","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#331305'>|</span>","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#06400b'>/</span>","<span style='color:#06400b'>\\</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>´</span>","&nbsp;","&nbsp;","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>.</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>´</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>.</span>","x","x","x"],
+    ["x","x","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>´</span>","<span style='color:#06400b'>´</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>.</span>","x","x"],
+    ["x","x","x","<span style='color:#06400b'>`</span>","<span style='color:#06400b'>-</span>","<span style='color:#06400b'>.</span>","&nbsp;","&nbsp;","<span style='color:#06400b'>.</span>","<span style='color:#06400b'>-</span>","<span style='color:#06400b'>´</span>","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#331305'>|</span>","<span style='color:#331305'>|</span>","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","<span style='color:#331305'>/","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#331305'>`","<span style='color:#331305'>\\","<span style='color:#331305'>|","<span style='color:#331305'>-","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#331305'>`</span>","<span style='color:#331305'>-</span>","<span style='color:#331305'>|</span>","<span style='color:#331305'>_</span>","<span style='color:#331305'>.</span>","x","x","x","x"],
+    ["x","x","<span style='color:#331305'>.</span>","<span style='color:#331305'>_</span>","&nbsp;","<span style='color:#331305'>`</span>","<span style='color:#331305'>/</span>","<span style='color:#331305'>/</span>","&nbsp;","<span style='color:#331305'>_</span>","<span style='color:#331305'>_</span>","<span style='color:#331305'>.</span>","x","x"],
+    ["x","x","x","x","x","<span style='color:#331305'>`</span>","<span style='color:#331305'>\\</span>","<span style='color:#331305'>\\</span>","<span style='color:#331305'>´</span>","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#331305'>|</span>","<span style='color:#331305'>|</span>","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#4d0000'>s</span>","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#4d0000'>S</span>","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#b52012'>(</span>","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#b52012'>)</span>","&nbsp;","<span style='color:#b52012'>(</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#b52012'>)</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>(</span>","x","x","x","x","x"],
+    ["x","x","x","<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","<span style='color:#e67f02'>6</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#b52012'>)</span>","x","x","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#b52012'>)</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","<span style='color:#b52012'>.</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#b52012'>)</span>","<span style='color:#b52012'>`</span>","&nbsp;","<span style='color:#e67f02'>^</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>(</span>","x","x","x","x"],
+    ["x","<span style='color:#b52012'>.</span>","<span style='color:#b52012'>(</span>","&nbsp;","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>´</span>","&nbsp;","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>.</span>","&nbsp;","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>)</span>","x","x"],
+    ["x","<span style='color:#b52012'>)</span>","&nbsp;","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>´</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>.</span>","&nbsp;","<span style='color:#b52012'>(</span>","x","x"],
+    ["<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>-</span>","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>-</span>","<span style='color:#e67f02'>´</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","x"],
+    ["x","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>-</span>","<span style='color:#b52012'>.</span>","&nbsp;","&nbsp;","<span style='color:#e67f02'>|</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>.</span>","<span style='color:#b52012'>-</span>","<span style='color:#b52012'>´</span>","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","<span style='color:#b52012'>,</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#b52012'>,</span>"," ","<span style='color:#b52012'>)</span>","<span style='color:#b52012'>)</span>","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#b52012'>,</span>","<span style='color:#b52012'>/</span>","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>(</span>","&nbsp;","<span style='color:#b52012'>(</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#b52012'>)</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","<span style='color:#b52012'>(</span>","x","x"],
+    ["x","<span style='color:#b52012'>,</span>","<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#e67f02'>/</span>","<span style='color:#e67f02'>\\</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","x"],
+    ["<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>´</span>","&nbsp;","&nbsp;","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>.</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>/</span>"],
+    ["x","<span style='color:#b52012'>)</span>","&nbsp;","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>´</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>.</span>","&nbsp;","<span style='color:#b52012'>(</span>","x"],
+    ["<span style='color:#b52012'>(</span>","&nbsp;","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>´</span>","<span style='color:#e67f02'>´</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>.</span>"," ","<span style='color:#b52012'>)</span>"],
+    ["x","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>.</span>","<span style='color:#e67f02'>`</span>","<span style='color:#e67f02'>-</span>","<span style='color:#e67f02'>.</span>","&nbsp;","&nbsp;","<span style='color:#e67f02'>.</span>","<span style='color:#e67f02'>-</span>","<span style='color:#e67f02'>´</span>","<span style='color:#b52012'>.</span>","<span style='color:#b52012'>´</span>","x"],
+    ["x","x","x","<span style='color:#b52012'>\\</span>","&nbsp;","&nbsp;","<span style='color:#e67f02'>|</span>","<span style='color:#e67f02'>|</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>/</span>","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","<span style='color:#b52012'>,</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#b52012'>,</span>","x","<span style='color:#b52012'>)</span>","<span style='color:#b52012'>)</span>","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#b52012'>,</span>","<span style='color:#b52012'>/</span>","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>(</span>","&nbsp;","<span style='color:#b52012'>(</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#b52012'>)</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","<span style='color:#b52012'>(</span>","x","x"],
+    ["x","<span style='color:#b52012'>,</span>","<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>/</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","x"],
+    ["<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>\\</span>","<span style='color:#540c05'>|</span>","<span style='color:#540c05'>-</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>/</span>"],
+    ["x","<span style='color:#b52012'>)</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>-</span>","<span style='color:#540c05'>|</span>","<span style='color:#540c05'>_</span>","<span style='color:#540c05'>.</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>(</span>","x"],
+    ["<span style='color:#b52012'>(</span>","&nbsp;","<span style='color:#540c05'>.","<span style='color:#540c05'>_","&nbsp;","<span style='color:#540c05'>`","<span style='color:#540c05'>/</span>","<span style='color:#540c05'>/</span>","&nbsp;","<span style='color:#540c05'>_</span>","<span style='color:#540c05'>_</span>","<span style='color:#540c05'>.</span>","&nbsp;","<span style='color:#b52012'>)</span>"],
+    ["x","<span style='color:#b52012'>`</span>","<span style='color:#b52012'>.</span>","&nbsp;","&nbsp;","<span style='color:#540c05'>`","<span style='color:#540c05'>\\","<span style='color:#540c05'>\\","<span style='color:#540c05'>´","&nbsp;","&nbsp;","<span style='color:#b52012'>.</span>","<span style='color:#b52012'>´</span>","x"],
+    ["x","x","x","<span style='color:#b52012'>\\</span>","&nbsp;","&nbsp;","<span style='color:#540c05'>|</span>","<span style='color:#540c05'>|</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>/</span>","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#540c05'>)</span>","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#540c05'>(</span>","x","<span style='color:#540c05'>)</span>","x","x","x","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","x","x","x","x","x","x","x","x"],
+    ["x","x","x","x","x","x","<span style='color:#540c05'>)</span>","x","x","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#540c05'>)</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>","<span style='color:#540c05'>.</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#540c05'>)</span>","<span style='color:#540c05'>`</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>(</span>","x","x","x","x"],
+    ["x","<span style='color:#540c05'>.</span>","<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>)</span>","x","x"],
+    ["x","<span style='color:#540c05'>)</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>(</span>","x","x"],
+    ["<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>","x"],
+    ["x","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>-</span>","<span style='color:#540c05'>.</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>.</span>","<span style='color:#540c05'>-</span>","<span style='color:#540c05'>´</span>","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","<span style='color:#540c05'>,</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#540c05'>,</span>"," ","<span style='color:#540c05'>)</span>","<span style='color:#540c05'>)</span>","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#540c05'>,</span>","<span style='color:#540c05'>/</span>","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>(</span>","&nbsp;","<span style='color:#540c05'>(</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#540c05'>)</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>","<span style='color:#540c05'>(</span>","x","x"],
+    ["x","<span style='color:#540c05'>,</span>","<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>","x"],
+    ["<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>/</span>"],
+    ["x","<span style='color:#540c05'>)</span>","&nbsp;","&nbsp;","<span style='color:#b52012'>(</span>","<span style='color:#b52012'>.</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>,</span>","&nbsp;","&nbsp;","<span style='color:#540c05'>(</span>","x"],
+    ["<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","&nbsp;","<span style='color:#b52012'>\\</span>","<span style='color:#b52012'>.</span>","<span style='color:#b52012'>´</span>","<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>"],
+    ["x","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>.</span>","<span style='color:#b52012'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>)</span>","<span style='color:#540c05'>.</span>","<span style='color:#540c05'>´</span>","x"],
+    ["x","x","x","<span style='color:#540c05'>\\</span>","<span style='color:#b52012'>\\</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#b52012'>/</span>","<span style='color:#540c05'>/</span>","x","x","x"]
+    ],
+    [
+    ["x","x","x","x","x","x","x","<span style='color:#540c05'>,</span>","x","x","x","x","x","x"],
+    ["x","x","x","x","x","<span style='color:#540c05'>,</span>","x","<span style='color:#540c05'>)","<span style='color:#540c05'>)</span>","x","x","x","x","x"],
+    ["x","x","x","x","<span style='color:#540c05'>,</span>","<span style='color:#540c05'>/</span>","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>(</span>","&nbsp;","<span style='color:#540c05'>(</span>","x","x","x","x"],
+    ["x","x","x","<span style='color:#540c05'>)</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>","<span style='color:#540c05'>(</span>","x","x"],
+    ["x","<span style='color:#540c05'>,</span>","<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>","x"],
+    ["<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>/</span>"],
+    ["x","<span style='color:#540c05'>)</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>(</span>","x"],
+    ["<span style='color:#540c05'>(</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>)</span>"],
+    ["x","<span style='color:#540c05'>`</span>","<span style='color:#540c05'>.</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>.</span>","<span style='color:#540c05'>´</span>","x"],
+    ["x","x","x","<span style='color:#540c05'>\\</span>","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","<span style='color:#540c05'>/</span>","x","x","x"]
+    ]
+    ];
+
+      function env(e) {
+        envs=["plain","night","ufo","bluescreen","dark","electric","seafoam","peach","electric lizard","vampire"];
+        select=envs.indexOf(e);
+        txtcolor=["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00","#00ba28","#000000"][select];
+        maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8","#4dff00","#900000"][select];
+        edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2","#bfff00","#292929"][select];
+        document.getElementById("edge").style.backgroundColor = edgecolor;
+        document.getElementById("page"+p.toString()).style.backgroundColor = maincolor;
+        document.getElementById("page"+p.toString()).style.color = txtcolor;
+        document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
+        
+        history.replaceState({ additionalInformation: ':)' },":D" , "tbt?e="+e+"&p="+l);
+     }
+
+
+
+     function freshforest(){
+      trees=10;
+      types=[0,1,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5];
+      typeslen=18;
+      for(i=1; i<trees; i++){
+          baseimage[Math.floor(y*Math.random())][Math.floor(x*Math.random())]=types[Math.floor(typeslen*Math.random())]+1;
+      }
+
+       // counter=1;
+       // for(i=1;i<4;i++){
+       //  for(j=1;j<7;j++){
+       //     baseimage[i*15][j*20]=counter;
+       //     counter++;
+       //  }
+       // }
+     
+     }
+
+
+
+     function display(){
+
+            for(i=0; i<y; i++){
+              for(j=0; j<x; j++){
+
+                if(baseimage[i][j]!=0){
+                  type=baseimage[i][j]-1;
+                  for(ii=0; ii<10; ii++){
+                    for(jj=0; jj<14; jj++){
+                     if(treeimage[type][ii][jj]!="x"){
+                      outimage[Math.max(i+ii-10,0)][Math.max(j+jj-14,0)]='<button onclick="smitehold('+i.toString()+','+j.toString()+')">'+treeimage[type][ii][jj]+'</button>';
+                     }
+
+                    }
+
+                  }
+
+                }
+              }
+            }
+            outstring="";
+
+            spaces=10;
+            outstring=outstring+"<br><br><br><br>";
+            for(j=1; j<spaces+1; j++){
+                outstring=outstring+"&nbsp;";
+            }
+            for(j=1; j<x-4; j++){
+                outstring=outstring+"<span style='color:#331305'>_</span>"
+            }
+            outstring=outstring+"<br>";
+            for(i=1; i<y-4; i++){
+
+              for(j=1; j<spaces; j++){
+                outstring=outstring+"&nbsp;";
+              }
+
+                outstring=outstring+"<span style='color:#331305'>|</span>";
+              for(j=1; j<x-4; j++){
+
+                //if(baseimage[i][j]!=0){
+                  //for(ii=1; ii<14; ii++){
+
+                  //}
+
+                //}
+                outstring=outstring+outimage[i][j].toString();
+                //outstring=outstring+baseimage[i][j].toString();
+               // outimage=outimage+"a \n"
+
+              }
+
+                outstring=outstring+"<span style='color:#331305'>|</span><br>";
+            }
+            for(j=1; j<spaces+1; j++){
+                outstring=outstring+"&nbsp;";
+            }
+            for(j=1; j<x-4; j++){
+                outstring=outstring+"<span style='color:#331305'>-</span>"
+            }
+            outstring=outstring+"<br><br><br><br>";
+
+            document.getElementById("image").innerHTML = outstring;
+     }
+     function burn(){
+      newbaseimage=baseimage;
+      radiusy=[2,3,5,7,9,8];
+      radiusx=[1,2,3,4,5,4];
+            for(i=0; i<y; i++){
+              for(j=0; j<x; j++){
+                if(baseimage[i][j]>6){
+                  radx=radiusx[(baseimage[i][j]-1)%6];
+                  rady=radiusy[(baseimage[i][j]-1)%6];
+                  for(ii=0; ii<radx*2; ii++){
+                    for(jj=0; jj<rady*2; jj++){
+                     if(baseimage[Math.min(Math.max(i+ii-radx,0),y-1)][Math.min(Math.max(j+jj-rady,0),x-1)]>0 && baseimage[Math.min(Math.max(i+ii-radx,0),y-1)][Math.min(Math.max(j+jj-rady,0),x-1)]<7&& Math.random()<0.3){
+                        newbaseimage[Math.min(Math.max(i+ii-radx,0),y-1)][Math.min(Math.max(j+jj-rady,0),x-1)]=(baseimage[Math.min(Math.max(i+ii-radx,0),y-1)][Math.min(Math.max(j+jj-rady,0),x-1)]+6);
+                     }
+
+                    }
+                  }
+                }
+              }
+            }
+      baseimage=newbaseimage;
+    }
+
+
+     function grow(){
+      probabilities=[0.00008,0.11,0.11,0.006,0.0045,0.006,0.0055]
+      burnprobabilities=[0.5,0.5,0.2,0.2,0.17,0.2,0.2]
+            for(i=0; i<y; i++){
+              for(j=0; j<x; j++){
+                if(baseimage[i][j]<7){
+                  if(Math.random()>1-probabilities[baseimage[i][j]]){
+                    baseimage[i][j]=(baseimage[i][j]+1)%7;
+                  }
+                }else if(baseimage[i][j]>6 && baseimage[i][j]<13){
+                  if(Math.random()>1-burnprobabilities[baseimage[i][j]-7]){
+                    baseimage[i][j]=baseimage[i][j]+6;
+                  }
+                }else{
+                  if(Math.random()>.4){
+                    if(baseimage[i][j]==13){
+                        baseimage[i][j]=0;
+                    }else if(baseimage[i][j]==18){
+                        baseimage[i][j]=baseimage[i][j]-2;
+                    }else{
+                        baseimage[i][j]=baseimage[i][j]-1;
+                    }
+                  }
+
+                }
+              }
+            }
+
+     }
+
+     function smitehold(a,b){
+        smitex=a;
+        smitey=b;
+        smite=true;
+
+
+     }
+
+     function animate(){
+
+      var id = null;
+      clearInterval(id);
+      id = setInterval(frame, 350);
+
+      function frame() {
+              display();
+              burn();
+              grow();
+              outimage =[...Array(y)].map(e => Array(x).fill("&nbsp;"));
+
+
+              if(smite){
+                if(baseimage[smitex][smitey]<7){
+                    baseimage[smitex][smitey]=baseimage[smitex][smitey]+6;
+                }
+                smite=false;
+              }
+
+            }
+
+     }
+    </script>
+ </head>
+
+<body id="edge"  style="background-color:#111111 ;margin:0; padding:0;-webkit-appearance: none;-moz-appearance: none;appearance: none;">
+
+<div id="image" style="width:980px;line-height: 1;white-space:pre; auto; background-color:#000000;min-height:100vh;margin-right: auto; margin-left:auto;">wait :)</div>
+
+
+<script>
+  freshforest();
+ // display();
+  animate();
+ // changetxt(p);
+</script>
+</body>
+</html>
